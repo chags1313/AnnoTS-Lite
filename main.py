@@ -208,7 +208,7 @@ titleright.title("AnnoTS")
 st.markdown("AnnoTS Web is designed make the annotation process easy")
 
 #Tabs
-settings, annotation, datashow, helps = st.tabs(['Settings', 'Annotation Canvas', 'Data', 'Help'])
+settings, annotation, datashow = st.tabs(['Settings', 'Annotation Canvas', 'Data'])
 
 #Classes that are used for annotation
 classes = [
@@ -314,11 +314,4 @@ else:
         st.info("Upload Data", icon = '📁')
     with datashow:
         st.info("Upload Data", icon = '📁')
-
-with helps:
-    v1, v2, v3 = st.columns(3)
-    webm = "C:/Users/chags/Downloads/upload.mp4"
-    with v1.expander("Upload"): st.video(webm)
-    with v2.expander("Annotate"): st.video(webm)
-    with v3.expander("Plot"): st.video(webm)
 
